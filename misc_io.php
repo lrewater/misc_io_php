@@ -154,25 +154,25 @@ function gvcode_to_gvindex($gvcode) {
 	}
 	// convert to an integer type code
 	switch ($code) {
-		case n: // N (1) - number
+		case 'n': // N (1) - number
 			$output = 1;
 			break;
-		case b: // B (2) - boolean
+		case 'b': // B (2) - boolean
 			$output = 2;
 			break;
-		case d: // D (3) - date
+		case 'd': // D (3) - date
 			$output = 3;
 			break;
-		case t: // T (4) - timeofday
+		case 't': // T (4) - timeofday
 			$output = 4;
 			break;
-		case a: // A (5) - datetime
+		case 'a': // A (5) - datetime
 			$output = 5;
 			break;
-		case s: // S (6) - string
+		case 's': // S (6) - string
 			$output = 6;
 			break;
-		case o: // note everything else returns a 0 - use the default mapping
+		case 'o': // note everything else returns a 0 - use the default mapping
 		default:
 			$output = 0;
 	}
